@@ -9,12 +9,12 @@ declare module "react-router" {
 
 const requestHandler = createRequestHandler(
   () => import("virtual:react-router/server-build"),
-  import.meta.env.MODE,
+  import.meta.env.MODE
 );
 
 export default async (request: Request, context: Context) => {
   return requestHandler(request, {
-    VALUE_FROM_NETLIFY: "Hello from Netlify",
+    VALUE_FROM_NETLIFY: "Hello from Jonathan",
   });
 };
 
