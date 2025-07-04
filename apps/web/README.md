@@ -51,5 +51,3 @@ Built with ❤️ using React Router.
 ## TODO
 
 check how to prefetch cms data on build with sanity and react router
-host on vercel.
-host cms as well
