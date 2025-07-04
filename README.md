@@ -47,3 +47,7 @@ Install netlify globaly to be able to use cli tools
 ---
 
 Built with ❤️ using React Router.
+
+## verlanglijstje
+
+make app statiuc and remove ssr files
