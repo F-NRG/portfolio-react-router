@@ -1,13 +1,13 @@
-import { createRequestListener } from "@mjackson/node-fetch-server";
-import express from "express";
+import { createRequestListener } from '@mjackson/node-fetch-server';
+import express from 'express';
 
-const PORT = Number.parseInt(process.env.PORT || "3000");
+const PORT = Number.parseInt(process.env.PORT || '3000');
 
 const app = express();
-app.disable("x-powered-by");
+app.disable('x-powered-by');
 
-console.log("Starting development server");
-const viteDevServer = await import("vite").then((vite) =>
+console.log('Starting development server');
+const viteDevServer = await import('vite').then((vite) =>
   vite.createServer({
     server: { middlewareMode: true },
   })
@@ -16,13 +16,13 @@ app.use(viteDevServer.middlewares);
 app.use(async (req, res, next) => {
   try {
     return await createRequestListener(async (request) => {
-      const source = await viteDevServer.ssrLoadModule("./server/app.ts");
+      const source = await viteDevServer.ssrLoadModule('./server/app.ts');
       return await source.default(request, {
         // TODO: Mock any required netlify functions context
       });
     })(req, res);
   } catch (error) {
-    if (typeof error === "object" && error instanceof Error) {
+    if (typeof error === 'object' && error instanceof Error) {
       viteDevServer.ssrFixStacktrace(error);
     }
     next(error);

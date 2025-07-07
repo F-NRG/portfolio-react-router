@@ -1,6 +1,8 @@
-import { Button } from "@radix-ui/themes";
+import { Button } from '@radix-ui/themes';
+import type { SanityDocument } from '@sanity/client';
+import { Link } from 'react-router';
 
-export function Welcome({ message }: { message: string }) {
+export function Welcome({ message, workExperience }: { message: string; workExperience: SanityDocument[] }) {
   return (
     <main>
       <div>
@@ -13,12 +15,23 @@ export function Welcome({ message }: { message: string }) {
               <li>{message}</li>
             </ul>
           </nav>
+          <h1>Work Experience</h1>
+          <ul>
+            {workExperience.map((item) => (
+              <li key={item._id}>
+                <Link to={`/${item.slug.current}`}>
+                  <h2>{item.title}</h2>
+                  <p>{new Date(item.startDate).toLocaleDateString()}</p>
+                </Link>
+              </li>
+            ))}
+          </ul>
           <Button
             size="4"
             radius="full"
             variant="solid"
             onClick={() => {
-              console.log("clicked");
+              console.log('clicked');
             }}
           >
             Click hello

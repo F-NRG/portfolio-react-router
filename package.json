@@ -6,7 +6,8 @@
     "build": "react-router build && node netlify/prepare.js",
     "dev": "cross-env NODE_ENV=development node ./dev-server.js",
     "start": "netlify serve",
-    "typecheck": "react-router typegen && tsc"
+    "typecheck": "react-router typegen && tsc",
+    "prettier": "prettier --write ."
   },
   "dependencies": {
     "@netlify/functions": "3.1.2",
@@ -16,6 +17,7 @@
     "@sanity/client": "^7.6.0",
     "@sanity/image-url": "^1.1.0",
     "isbot": "^5.1.27",
+    "prettier": "^3.6.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router": "^7.5.3"

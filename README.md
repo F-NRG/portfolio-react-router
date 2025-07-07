@@ -48,6 +48,8 @@ Install netlify globaly to be able to use cli tools
 
 Built with ❤️ using React Router.
 
-## verlanglijstje
+## TODO
 
-make app statiuc and remove ssr files
+check how to prefetch cms data on build with sanity and react router
+host on vercel.
+host cms as well
