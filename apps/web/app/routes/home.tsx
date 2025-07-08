@@ -14,7 +14,7 @@ export function meta({}: Route.MetaArgs) {
 
 export async function loader({ context }: Route.LoaderArgs) {
   return {
-    message: context.VALUE_FROM_NETLIFY,
+    message: context.VALUE_FROM_SERVER,
     workExperience: await client.fetch<SanityDocument[]>(WORK_EXPERIENCE_QUERY),
   };
 }

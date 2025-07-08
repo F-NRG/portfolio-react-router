@@ -12,6 +12,7 @@
 **/build/
 **/.sanity
 **/.vite/
+**/.vercel/
 
 # Turbo
 .turbo

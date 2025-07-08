@@ -4,7 +4,7 @@
   "type": "module",
   "packageManager": "pnpm@10.0.0",
   "scripts": {
-    "build": "react-router build ",
+    "build": "react-router build",
     "dev": "cross-env NODE_ENV=development node ./dev-server.js",
     "check-types": "react-router typegen && tsc",
     "prettier": "prettier --write ."
@@ -14,6 +14,7 @@
     "@react-router/node": "^7.5.3",
     "@sanity/client": "^7.6.0",
     "@sanity/image-url": "^1.1.0",
+    "@vercel/react-router": "^1.2.0",
     "isbot": "^5.1.27",
     "prettier": "^3.6.2",
     "react": "^19.1.0",
