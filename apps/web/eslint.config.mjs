@@ -33,8 +33,8 @@ export default [
     },
     rules: {
       // Basic rules
-      'no-console': 'off', // Allow console in web app
-      'no-unused-vars': 'off',
+      'no-console': 'warn',
+      'no-unused-vars': 'warn',
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
 
       // React rules
