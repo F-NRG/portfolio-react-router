@@ -8,7 +8,7 @@ const WORK_EXPERIENCE_QUERY = `*[
   && defined(slug.current)
 ]|order(startDate desc)[0...12]{_id, title, slug, startDate}`;
 
-export function meta({}: Route.MetaArgs) {
+export function meta() {
   return [{ title: 'Resumé of Jonathan Verstraten' }, { name: 'description', content: 'Resumé of Jonathan Verstraten' }];
 }
 

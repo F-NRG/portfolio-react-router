@@ -11,6 +11,9 @@
     "check-types": {
       "outputs": []
     },
+    "lint": {
+      "outputs": []
+    },
     "prettier": {
       "outputs": []
     },
