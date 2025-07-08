@@ -1,4 +1,3 @@
-import { Button } from '@radix-ui/themes';
 import type { SanityDocument } from '@sanity/client';
 import { Link } from 'react-router';
 
@@ -26,16 +25,6 @@ export function Welcome({ message, workExperience }: { message: string; workExpe
               </li>
             ))}
           </ul>
-          <Button
-            size="4"
-            radius="full"
-            variant="solid"
-            onClick={() => {
-              console.log('clicked');
-            }}
-          >
-            Click hello
-          </Button>
         </div>
       </div>
     </main>

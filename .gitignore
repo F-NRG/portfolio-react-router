@@ -1,9 +1,23 @@
+# Dependencies
+
 .DS_Store
 /node_modules/
+**/node_modules/
+/.pnp
+.pnp.js
 
-# React Router
-/.react-router/
-/build/
+# build / runtime
+**/.react-router/
+**/dist/
+**/build/
+**/.sanity
+**/.vite/
 
-# Netlify
-.netlify
+# Turbo
+.turbo
+
+# Typescript
+*.tsbuildinfo
+
+# Dotenv and similar local-only files
+*.local

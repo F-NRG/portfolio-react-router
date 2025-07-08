@@ -4,7 +4,7 @@ import type { SanityDocument } from '@sanity/client';
 import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
 import { PortableText } from '@portabletext/react';
 import type { Route } from './+types/post';
-import { client } from '~/sanity/client';
+import { client } from '../sanity/client';
 
 const { projectId, dataset } = client.config();
 const urlFor = (source: SanityImageSource) => (projectId && dataset ? imageUrlBuilder({ projectId, dataset }).image(source) : null);

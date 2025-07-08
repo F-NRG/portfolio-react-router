@@ -1,7 +1,7 @@
 import type { Route } from './+types/home';
 import { Welcome } from '../welcome/welcome';
 import type { SanityDocument } from '@sanity/client';
-import { client } from '~/sanity/client';
+import { client } from '../sanity/client';
 
 const WORK_EXPERIENCE_QUERY = `*[
   _type == "workExperience"
